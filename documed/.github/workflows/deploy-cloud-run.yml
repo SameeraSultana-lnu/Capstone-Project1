@@ -11,6 +11,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    defaults:
+      run:
+        working-directory: documed
 
     steps:
       - name: Check out repository

@@ -21,6 +21,7 @@ Add these repository secrets in GitHub:
    - Storage Admin
    - Viewer
 5. Bind the GitHub repository to the Workload Identity Provider.
+6. Grant the same service account `roles/artifactregistry.writer` so it can push the container image.
 
 ## Deploy
 

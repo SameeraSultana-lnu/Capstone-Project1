@@ -1,7 +1,0 @@
-# .gcloudignore
-.git
-.gitignore
-
-# Include dist directory despite .gitignore
-!dist/
-!dist/**

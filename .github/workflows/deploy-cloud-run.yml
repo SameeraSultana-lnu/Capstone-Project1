@@ -48,8 +48,9 @@ jobs:
       - name: Build and push image
         run: |
           gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+          BUILD_SA="projects/${{ secrets.GCP_PROJECT_ID }}/serviceAccounts/${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}"
           gcloud builds submit \
-            --service-account=${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }} \
+            --service-account="${BUILD_SA}" \
             --gcs-log-dir=gs://${{ secrets.GCP_PROJECT_ID }}_cloudbuild/logs \
             --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/documed:${{ github.sha }} \
             .

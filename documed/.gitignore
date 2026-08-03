@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local presentation artifacts
+DocuMed_Final_Presentation.pptx
+generate_presentation.py
+_pptx_notes_probe.py
+assets_live.png
+
+# Local Python virtual environments
+.venv/
+venv/
+env/
